@@ -54,7 +54,7 @@ public class CellManager : MonoBehaviour {
         {
             for (int j = 0; j < 3; ++j)
             {
-                int maxLimit = (m_depth == 1) ? 3 : 1; // check for 2D or 3D neighbors BASED ON DEPTH
+                int maxLimit = (m_depth == 1) ? 1 : 3; // check for 2D or 3D neighbors BASED ON DEPTH
                 for(int k = 0; k < maxLimit; ++k)
                 {
                     if (offset[i] != 0 || offset[j] != 0 || offset[k] != 0) // if offsets are not all zeroes -> add as neighbor
@@ -169,8 +169,8 @@ public class CellManager : MonoBehaviour {
                 {
                     Cell c = m_cells[x, y, z]; // take a cell
                     c.m_alive = // assign cell state
-                        ((!c.m_alive && c.neighborsAlive == 5) || // dead cell logic
-                        (c.m_alive && (c.neighborsAlive > 3 && c.neighborsAlive < 9))); // alive cell logic
+                        ((!c.m_alive && c.neighborsAlive == 4) || // dead cell logic: exactly 4
+                        (c.m_alive && (c.neighborsAlive >= 4 && c.neighborsAlive <= 9))); // alive cell logic: 4-9
                     c.ChangeColor();
                 }
             }
