@@ -6,7 +6,7 @@ Controls:
 - QE - Move camera up and down
 - IJKL - Rotate the camera
 - SPACEBAR - Pauses and start simulation of Life of Game
-
+- MOUSE LEFT CLICK - Toggles cell's state
 To handle this problem, I have defined two classes:
 
 Cell.cs
