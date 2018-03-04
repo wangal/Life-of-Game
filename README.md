@@ -2,10 +2,10 @@
 Conway's Life of Game in 2D and 3D
 
 Controls: 
-WASD - Move camera forward, left, backward, and right
-QE - Move camera up and down
-IJKL - Rotate the camera
-SPACEBAR - Pauses and start simulation of Life of Game
+- WASD - Move camera forward, left, backward, and right
+- QE - Move camera up and down
+- IJKL - Rotate the camera
+- SPACEBAR - Pauses and start simulation of Life of Game
 
 To handle this problem, I have defined two classes:
 
